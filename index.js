@@ -9,6 +9,11 @@ function average(numbers) {
   return sum(numbers) / numbers.length;
 }
 
+function max(numbers) {
+  return Math.max(...numbers);
+}
+
 const data = [1, 2, 3, 4, 5];
 console.log("Sum:", sum(data));
 console.log("Average:", average(data));
+console.log("Max:", max(data));
