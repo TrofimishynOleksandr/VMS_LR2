@@ -1,3 +1,5 @@
+const isOdd = require("./libs/is-odd");
+
 function sum(numbers) {
   return numbers.reduce((acc, n) => acc + n, 0);
 }
@@ -17,3 +19,4 @@ const data = [1, 2, 3, 4, 5];
 console.log("Sum:", sum(data));
 console.log("Average:", average(data));
 console.log("Max:", max(data));
+console.log("Odd numbers:", data.filter((n) => isOdd(n)));
