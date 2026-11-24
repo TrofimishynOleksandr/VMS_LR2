@@ -1,0 +1,17 @@
+#!/bin/sh
+# pre-commit hook: run ESLint on staged .js files, block commit on errors
+
+FILES=$(git diff --cached --name-only --diff-filter=ACM -- '*.js')
+if [ -z "$FILES" ]; then
+  exit 0
+fi
+
+echo "pre-commit: running ESLint on staged files..."
+npx eslint $FILES
+if [ $? -ne 0 ]; then
+  echo "pre-commit: ESLint found errors. Commit aborted."
+  exit 1
+fi
+
+echo "pre-commit: ESLint passed."
+exit 0

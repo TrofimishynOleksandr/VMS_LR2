@@ -11,5 +11,9 @@
   "description": "",
   "dependencies": {
     "is-number": "^7.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0"
   }
 }
