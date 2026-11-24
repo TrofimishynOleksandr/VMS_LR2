@@ -1,0 +1,3 @@
+[submodule "libs/is-odd"]
+	path = libs/is-odd
+	url = https://github.com/jonschlinkert/is-odd.git
